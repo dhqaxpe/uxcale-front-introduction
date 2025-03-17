@@ -168,3 +168,45 @@ body {
   width: var(--user-row-height);
   box-shadow: var(--color-primary-dark) 2px 0px;
 }
+
+/* User detail */
+.user__detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-card {
+  max-width: 25rem;
+  max-height: 30rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  background-color: var(--color-primary-accent);
+  padding: 3rem;
+  border-radius: 4rem;
+
+  text-align: left;
+}
+
+.user-card > img {
+  border-radius: 4rem;
+}
+
+.user-card__name {
+  font-size: 1.6rem;
+}
+
+.user-card__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.user-card__contact > a {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  cursor: pointer;
+}

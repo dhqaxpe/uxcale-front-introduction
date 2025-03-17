@@ -17,5 +17,18 @@ export function UserDetail(props: { userId: string }) {
     })();
   }, []);
 
-  return <section>The user Id is: {parsedUserId}</section>;
+  return (
+    <section className="user__detail">
+      <div className="user-card">
+        <img src={userInfo?.picture} />
+        <div className="user-card__name">
+          {userInfo?.firstName} {userInfo?.lastName} {userInfo?.lastName2}
+        </div>
+        <div className="user-card__contact">
+          <a href={`mailto:${userInfo?.email}`}>Mail: {userInfo?.email}</a>
+          <a href={`tel:${userInfo?.email}`}>Tel: {userInfo?.phone}</a>
+        </div>
+      </div>
+    </section>
+  );
 }
