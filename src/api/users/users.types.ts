@@ -22,4 +22,6 @@ export type UserDetail = Omit<User, 'nif'> & {
   };
 };
 
+export type UserPostApi = Omit<User, 'id'>;
+
 export type UserListApiResponse = typeof users_example_json;

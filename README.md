@@ -27,3 +27,7 @@ Preview the production build locally:
 ```bash
 pnpm preview
 ```
+
+## TODO
+
+- Error message when user not found. Can be replicated by deleting one and going back.

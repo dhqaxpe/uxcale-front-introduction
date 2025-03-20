@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { UserListApiResponse } from 'src/api/users/users.types';
 import { fetch_paginated_users } from 'src/api/users/users.utils';
 import { UserRow } from 'src/components/user-row/user-row';
+import { Link } from 'wouter';
 
 export function UserList() {
   // const userResponse = use(fetch_all_users());
@@ -24,7 +25,12 @@ export function UserList() {
 
   return (
     <section className="users-page">
-      <h1 className="user-list__heading">Users</h1>
+      <div className="user-list__heading">
+        <h1>Users</h1>
+        <Link href="/users/add" className="user-list__add__link">
+          +
+        </Link>
+      </div>
       <ul className="user-list">
         {userResponse
           ? userResponse.data.map((user) => (
@@ -47,7 +53,7 @@ export function UserList() {
             <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
           </svg>
         </button>
-        <label>{page}</label>
+        <label>{page + 1}</label>
         <button
           className="user-list__pagination-controls__button"
           onClick={() =>
