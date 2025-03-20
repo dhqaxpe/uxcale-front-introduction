@@ -25,9 +25,9 @@ export function UserAdd() {
       <form className="user-add__form" onSubmit={submit_action}>
         <input name="username" placeholder="username" required />
         <input name="name" placeholder="name" />
-        <input name="firstname" placeholder="firstname" />
-        <input name="lastname" placeholder="lastname" />
-        <input name="lastname2" placeholder="lastname2" />
+        <input name="firstName" placeholder="firstname" />
+        <input name="lastName" placeholder="lastname" />
+        <input name="lastName2" placeholder="lastname2" />
         <input name="email" type="email" placeholder="asdf@foo.me" />
         <input name="phone" placeholder="+34 923123456" />
         <input name="nif" placeholder="80347856P" />
